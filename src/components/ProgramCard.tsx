@@ -100,7 +100,7 @@ export default function ProgramCard({
             y: 0,
             scale: 1,
             transition: {
-                type: 'spring',
+                type: 'spring' as const,
                 stiffness: 280,
                 damping: 24,
                 delay: index * 0.07,
@@ -130,7 +130,7 @@ export default function ProgramCard({
                 className="absolute inset-0 opacity-5 pointer-events-none"
                 style={{
                     background: `radial-gradient(ellipse at top right, ${program.region === 'UK' ? '#f43f5e' :
-                            program.region === 'Australia' ? '#10b981' : '#6366f1'
+                        program.region === 'Australia' ? '#10b981' : '#6366f1'
                         }, transparent 70%)`,
                 }}
             />
